@@ -1,0 +1,12 @@
+// Typography styling
+@mixin font-teko($font-size, $font-weight) {
+	font-family: Teko, sans-serif;
+	font-weight: $font-weight;
+	font-size: $font-size;
+}
+
+@mixin font-roboto($font-size, $font-weight) {
+	font-family: Roboto, sans-serif;
+	font-weight: $font-weight;
+	font-size: $font-size;
+}
