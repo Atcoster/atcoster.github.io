@@ -1,0 +1,8 @@
+// skewed
+@mixin skewed( $deg ) {
+	-webkit-transform: skewX($deg);
+	-moz-transform: skewX($deg);
+	-ms-transform: skewX($deg);
+	-o-transform: skewX($deg);
+	transform: skewX($deg);
+}

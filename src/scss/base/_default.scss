@@ -2,5 +2,60 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
 	font-family: Roboto, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+	line-height: 28px;
+	color: $white;
+	overflow: hidden;
+	white-space: nowrap;
+	scroll-behavior: auto;
+}
+
+h1,
+h2,
+h3 {
+	margin: 30px 0;
+}
+
+h1 {
+	font-size: 96px;
+	line-height: 84px;
+}
+
+h2 {
+	font-size: 72px;
+	line-height: 60px;
+}
+
+h3 {
+	font-size: 48px;
+	line-height: 42px;
+}
+
+#portfolio {
+	position: relative;
+	width: $screen--width;
+	height: $screen--height;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 100%;
+}
+
+@media only screen and ( max-width: 320px ) {
+
+	body {
+		font-size: 2em;
+	}
 }

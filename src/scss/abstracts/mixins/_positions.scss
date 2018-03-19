@@ -1,0 +1,15 @@
+// contents
+@mixin position-front( $pos: relative, $index: 99, $space: pre-line ) {
+	position: $pos;
+	z-index: $index;
+	white-space: $space;
+}
+
+@mixin position-absolute( $pos: absolute, $args: 0 ) {
+	content: '';
+	position: $pos;
+	top: $args;
+	left: $args;
+	right: $args;
+	bottom: $args;
+}

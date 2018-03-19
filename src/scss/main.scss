@@ -12,5 +12,16 @@
 @import 'base/default';
 
 // Layouts
+@import 'layouts/header';
+
+// Pages
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/projects';
 
 // Partials
+@import 'partials/logo';
+@import 'partials/navigation';
+@import 'partials/social';
+@import 'partials/story';
+@import 'partials/skills';

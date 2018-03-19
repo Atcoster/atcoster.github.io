@@ -1,0 +1,33 @@
+.social {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+
+	&__item {
+		margin-bottom: 30px;
+
+		a {
+			display: flex;
+			justify-content: center;
+		}
+
+		&-icon {
+			width: 25px;
+			height: 25px;
+
+			&--competa {
+				background: url('./../assets/icons/competa.svg') no-repeat center;
+				background-size: contain;
+			}
+
+			&--github {
+				background: url('./../assets/icons/github.svg') no-repeat center;
+				background-size: contain;
+			}
+		}
+
+		&:nth-child( 2 ) {
+			margin-bottom: 0;
+		}
+	}
+}

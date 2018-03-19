@@ -1,0 +1,24 @@
+.home {
+	display: flex;
+	position: relative;
+	padding: 140px;
+	width: calc(100% - 80px);
+	height: 100%;
+	align-items: center;
+	background: url('./../assets/images/home_bg.jpg') no-repeat center;
+	background-size: cover;
+	z-index: 1;
+
+	&__content {
+		@include position-front();
+
+		padding: 10px;
+	}
+
+	&:after {
+		@include background-opacity($blue);
+		@include position-absolute();
+
+		z-index: 2;
+	}
+}

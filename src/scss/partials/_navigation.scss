@@ -1,0 +1,42 @@
+.nav {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+
+	&__item {
+		margin-bottom: 60px;
+
+		svg:hover {
+			fill: #f00;
+		}
+
+		a {
+			display: flex;
+			justify-content: center;
+		}
+
+		&-icon {
+			width: 25px;
+			height: 25px;
+
+			&--home {
+				background: url('./../assets/icons/home.svg') no-repeat center;
+				background-size: contain;
+			}
+
+			&--about {
+				background: url('./../assets/icons/about.svg') no-repeat center;
+				background-size: contain;
+			}
+
+			&--projects {
+				background: url('./../assets/icons/projects.svg') no-repeat center;
+				background-size: contain;
+			}
+		}
+
+		&:nth-child( 3 ) {
+			margin-bottom: 0;
+		}
+	}
+}

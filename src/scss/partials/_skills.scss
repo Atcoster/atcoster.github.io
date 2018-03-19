@@ -1,0 +1,32 @@
+.skills {
+	display: flex;
+	width: 50%;
+	position: relative;
+	z-index: 99;
+	white-space: pre-line;
+	padding: 90px 190px;
+	align-items: center;
+
+	&__content {
+		@include position-front();
+		@include skewed(7.5deg);
+
+		padding: 10px;
+	}
+
+	&__title {
+		margin-bottom: 100px;
+	}
+
+	&:before {
+		@include background-opacity($gray--light);
+
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+}

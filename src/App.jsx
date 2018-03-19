@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-require( './pages/main.jsx' );
-require( './scss/main.scss' );
+import Main from './components/Main.jsx';
 
 class App extends Component {
+
 	render() {
 		return (
-			<div className='App'></div>
+			<Main />
 		);
 	}
 }
