@@ -82,12 +82,9 @@
 		"no-new": 1,
 		"no-octal-escape": 1,
 		"no-octal": 1,
-		"no-param-reassign": [
-			1,
-			{
-				"props": true
-			}
-		],
+		"no-param-reassign": [2, {
+			"props": false
+		}],
 		"no-process-env": 1,
 		"no-proto": 1,
 		"no-redeclare": 1,
@@ -257,7 +254,7 @@
 		"no-var": 1,
 		"max-len": [
 			1,
-			128,
+			150,
 			{
 				"ignoreUrls": true
 			}
