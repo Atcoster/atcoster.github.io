@@ -1,36 +1,39 @@
 .story {
+	@include z-pos-back();
+
 	display: flex;
 	width: 50%;
-	position: relative;
-	z-index: 99;
-	white-space: pre-line;
 	padding: 90px 185px;
-	align-items: center;
+	align-items: flex-start;
+	white-space: pre-line;
+
+	&:before {
+		@include background-opacity($gray--dark, 0.8);
+		@include pos-absolute-wide();
+	}
 
 	&__content {
-		@include position-front();
+		@include z-pos-front();
 		@include skewed(7.5deg);
 
 		padding: 10px;
 	}
 
 	&__title {
+		display: flex;
 		margin-bottom: 100px;
+		align-items: center;
+		justify-content: space-between;
+
+		&:after {
+			content: '';
+			width: 100px;
+			height: 8px;
+			background-color: $white;
+		}
 	}
 
 	&__text:last-child {
 		margin-top: 20px;
-	}
-
-	&:before {
-		@include background-opacity($gray--dark);
-
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 1;
 	}
 }

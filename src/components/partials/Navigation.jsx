@@ -1,28 +1,47 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Nav from '../../utils/Nav';
 
 class Navigation extends Component {
+
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			links : [ 'home', 'about', 'projects' ]
+		}
+	}
+
+	handleClick( event ) {
+		Nav.activeHandler( event ); // handle the active menu item
+		this.props.handleNavClick( event );
+	}
 
 	render() {
 		return (
 			<ul className='nav'>
-				<li className='nav__item'>
-					<a href="#home">
-						<i className="nav__item-icon nav__item-icon--home"></i>
-					</a>
-				</li>
-				<li className='nav__item'>
-					<a href="#about">
-						<i className="nav__item-icon nav__item-icon--about"></i>
-					</a>
-				</li>
-				<li className='nav__item'>
-					<a href="#projects">
-						<i className="nav__item-icon nav__item-icon--projects"></i>
-					</a>
-				</li>
+				{
+					this.state.links.map(( link, index ) => {
+						const LINK = link.toLowerCase();
+						const NAME = LINK.charAt( 0 ).toUpperCase() + LINK.slice( 1 );
+
+						return (
+							<li key= { index } className='nav__item'>
+								<a href={`#${LINK}`} onClick={ this.handleClick.bind( this )} className='nav__link'>
+									<i className={`nav__icon nav__icon--${LINK}`}></i>
+									<span className='nav__text'>{NAME}</span>
+								</a>
+							</li>
+						)
+					} )
+				}
 			</ul>
 		);
 	}
+}
+
+Navigation.propTypes = {
+	handleNavClick : PropTypes.func.isRequired
 }
 
 export default Navigation;

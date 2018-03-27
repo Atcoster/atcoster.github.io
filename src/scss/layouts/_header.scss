@@ -1,9 +1,11 @@
 .header {
+	@include z-pos-first();
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
 	padding: 30px 17px;
 	background-color: $white;
-	z-index: 999;
+	position: fixed;
 }

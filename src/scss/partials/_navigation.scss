@@ -1,42 +1,91 @@
 .nav {
+	$navIcon: nav__icon;
+	$navText: nav__text;
+
 	display: flex;
 	flex-direction: column;
-	list-style-type: none;
 
 	&__item {
 		margin-bottom: 60px;
 
-		svg:hover {
-			fill: #f00;
-		}
-
-		a {
-			display: flex;
-			justify-content: center;
-		}
-
-		&-icon {
-			width: 25px;
-			height: 25px;
-
-			&--home {
-				background: url('./../assets/icons/home.svg') no-repeat center;
-				background-size: contain;
-			}
-
-			&--about {
-				background: url('./../assets/icons/about.svg') no-repeat center;
-				background-size: contain;
-			}
-
-			&--projects {
-				background: url('./../assets/icons/projects.svg') no-repeat center;
-				background-size: contain;
-			}
-		}
-
 		&:nth-child( 3 ) {
 			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		height: 25px;
+		text-decoration: none;
+		position: relative;
+
+		&--active,
+		&:hover {
+
+			.#{$navIcon}--home {
+				background-image: svg-url-with-replaced-fill($svg-icon-home, $gray--dark, $blue);
+				transform: scale(1.1);
+			}
+
+			.#{$navIcon}--about {
+				background-image: svg-url-with-replaced-fill($svg-icon-about, $gray--dark, $blue);
+				transform: scale(1.1);
+			}
+
+			.#{$navIcon}--projects {
+				background-image: svg-url-with-replaced-fill($svg-icon-projects, $gray--dark, $blue);
+				transform: scale(1.1);
+			}
+
+			.#{$navText} {
+				display: block;
+				opacity: 1;
+				color: $blue;
+			}
+		}
+	}
+
+	&__icon {
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: all 0.5s ease-in-out;
+		width: 25px;
+
+		&--home {
+			background-image: svg-url-with-replaced-fill($svg-icon-home, $gray--dark, $gray--dark);
+		}
+
+		&--about {
+			background-image: svg-url-with-replaced-fill($svg-icon-about, $gray--dark, $gray--dark);
+		}
+
+		&--projects {
+			background-image: svg-url-with-replaced-fill($svg-icon-projects, $gray--dark, $gray--dark);
+		}
+	}
+
+	&__text {
+		@include skewed(-7.5deg);
+		@include z-pos-back( absolute, -1);
+
+		display: none;
+		opacity: 0;
+		left: 35px;
+		padding: 0 20px 0 35px;
+		background-color: $white;
+		color: $gray--dark;
+		animation: text-anim 1s alternate backwards;
+	}
+
+	@keyframes text-anim {
+
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
 		}
 	}
 }

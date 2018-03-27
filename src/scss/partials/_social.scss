@@ -1,33 +1,36 @@
 .social {
 	display: flex;
 	flex-direction: column;
-	list-style-type: none;
 
 	&__item {
 		margin-bottom: 30px;
 
-		a {
-			display: flex;
-			justify-content: center;
-		}
-
-		&-icon {
-			width: 25px;
-			height: 25px;
-
-			&--competa {
-				background: url('./../assets/icons/competa.svg') no-repeat center;
-				background-size: contain;
-			}
-
-			&--github {
-				background: url('./../assets/icons/github.svg') no-repeat center;
-				background-size: contain;
-			}
-		}
-
-		&:nth-child( 2 ) {
+		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		height: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: all 1s ease-in-out;
+
+		&--competa {
+			background-image: svg-url-with-replaced-fill($svg-icon-competa, $gray--light, $gray--light);
+
+			&:hover {
+				background-image: svg-url-with-replaced-fill($svg-icon-competa, $gray--light, $blue);
+			}
+		}
+
+		&--github {
+			background-image: svg-url-with-replaced-fill($svg-icon-github, $gray--light, $gray--light);
+
+			&:hover {
+				background-image: svg-url-with-replaced-fill($svg-icon-github, $gray--light, $blue);
+			}
 		}
 	}
 }

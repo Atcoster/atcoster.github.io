@@ -1,11 +1,25 @@
 // contents
-@mixin position-front( $pos: relative, $index: 99, $space: pre-line ) {
+@mixin z-pos-first( $pos: relative, $index: 999 ) {
 	position: $pos;
 	z-index: $index;
-	white-space: $space;
 }
 
-@mixin position-absolute( $pos: absolute, $args: 0 ) {
+@mixin z-pos-front( $pos: relative, $index: 99 ) {
+	position: $pos;
+	z-index: $index;
+}
+
+@mixin z-pos-between( $pos: relative, $index: 98 ) {
+	position: $pos;
+	z-index: $index;
+}
+
+@mixin z-pos-back( $pos: relative, $index: 97 ) {
+	position: $pos;
+	z-index: $index;
+}
+
+@mixin pos-absolute-wide( $pos: absolute, $args: 0 ) {
 	content: '';
 	position: $pos;
 	top: $args;
