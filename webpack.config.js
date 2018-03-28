@@ -1,22 +1,23 @@
-const WEBPACK             = require('webpack');
-const PATH                = require('path');
-const EXTRACT_TEXT_PLUGIN = require('extract-text-webpack-plugin');
-const HTML_WEBPACK_PLUGIN = require('html-webpack-plugin');
-const STYLE_LINT_PLUGIN   = require('stylelint-webpack-plugin');
+const WEBPACK                = require('webpack');
+const PATH                   = require('path');
+const EXTRACT_TEXT_PLUGIN    = require('extract-text-webpack-plugin');
+const HTML_WEBPACK_PLUGIN    = require('html-webpack-plugin');
+const STYLE_LINT_BARE_PLUGIN = require('stylelint-bare-webpack-plugin');
+const POLYFILL               = '@babel/polyfill';
 
 module.exports = {
-	devtool: 'eval',
+	devtool: 'source-map',
 	target: 'web',
-	entry: './src/index.jsx',
+	entry: [POLYFILL, './src/index.jsx'],
 	output: {
-		path: PATH.join(__dirname, 'public'),
+		path: PATH.resolve(__dirname, 'public'),
 		filename: 'bundle.js'
 	},
 	resolve: {
 		extensions: ['.js', '.jsx']
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.jsx?$/,
 				loaders: ['babel-loader', 'eslint-loader'],
@@ -54,16 +55,15 @@ module.exports = {
 				collapseWhitespace: true
 			},
 			hash: true,
-			template: './index.html'
+			template: PATH.resolve(__dirname, './index.html'),
 		}),
 		new EXTRACT_TEXT_PLUGIN({
 			filename: 'main.css'
 		}),
-		new STYLE_LINT_PLUGIN({
+		new STYLE_LINT_BARE_PLUGIN({
 			options: {
-				configFile: '.stylelintrc',
-				context: 'scss/main.scss',
-				syntax: 'scss'
+				files: '**/*.s?(c\|a)ss',
+				configFile: PATH.resolve(__dirname, './.stylelintrc')
 			}
 		}),
 	]

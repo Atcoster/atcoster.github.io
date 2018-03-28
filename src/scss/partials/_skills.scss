@@ -21,7 +21,7 @@
 		@include skewed(7.5deg);
 
 		display: flex;
-		margin-bottom: 100px;
+		margin-bottom: 80px;
 		align-items: center;
 		justify-content: space-between;
 
@@ -73,6 +73,7 @@
 		filter: grayscale(100%);
 		backface-visibility: hidden;
 		-webkit-font-smoothing: antialiased;
+		transform: skew(7.5deg);
 
 		&:hover {
 			filter: none;

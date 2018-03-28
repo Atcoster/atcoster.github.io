@@ -8,9 +8,9 @@ const NAV = {
 			aboutRect          = document.querySelector( '.about' ).getBoundingClientRect(),
 			projectsRect       = document.querySelector( '.projects' ).getBoundingClientRect();
 
-		items.forEach(( item ) => {
+		for ( let item of items ) {
 			item.className = originalClass;
-		} );
+		}
 
 		if ( event ) {
 			event.currentTarget.className = originalClass + activeClass;
@@ -30,12 +30,12 @@ const NAV = {
 			if ( offset > homeFixedWidth + aboutFixedWidth && offset <= homeFixedWidth + aboutFixedWidth + projectsFixedWidth )
 				activeSection = 'projects';
 
-			items.forEach(( item ) => {
+			for ( let item of items ) {
 				let itemHref = item.href.split( '#' )[ 1 ].toString();
 				if ( itemHref === activeSection ) {
 					item.className = originalClass + activeClass;
 				}
-			} );
+			}
 		}
 	}
 }
