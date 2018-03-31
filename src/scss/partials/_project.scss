@@ -1,0 +1,66 @@
+.project {
+	$root : project;
+
+	@include skewed(7.5deg);
+
+	height: 500px;
+	position: relative;
+	margin-right: 85px;
+	box-shadow: -10px 5px 15px 2px $blue--dark;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	flex: 0 0 auto;
+	width: 320px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&--active,
+	&:hover {
+		@include skewed(0deg);
+
+		transform: scale(1.1);
+		box-shadow: none;
+
+		.#{$root}__name {
+			background-color: $blue;
+			color: $white;
+			left: 0;
+		}
+
+		.#{$root}__button {
+			@include skewed(0deg);
+
+			background-color: $blue;
+			color: $white;
+			right: 0;
+
+			&__arrow {
+				background-image: svg-url-with-replaced-fill($svg-icon-right-arrow, $blue, $white);
+			}
+		}
+	}
+
+	&__name {
+		@include z-pos-front();
+
+		position: absolute;
+		width: 100%;
+		bottom: 10px;
+		left: 15px;
+		padding: 10px;
+		background-color: $white;
+		color: $blue;
+		text-align: center;
+		transition: all 0.5s ease-in-out;
+
+		&__text {
+			@include skewed(-7.5deg);
+		}
+	}
+
+	&__image {
+		@include z-pos-between();
+	}
+}

@@ -1,22 +1,52 @@
 .projects {
-	position: relative;
+	@include z-pos-back();
+
+	display: block;
+	flex: 0 0 auto;
 	background: url('./../assets/images/projects_bg.jpg') no-repeat center;
 	background-size: cover;
-	padding: 150px;
 	width: 100%;
-	height: 100%;
-	z-index: 1;
 
 	&:before {
 		@include background-opacity($blue);
+		@include pos-absolute-wide();
+	}
 
-		content: '';
+	&__content {
+		@include z-pos-front();
+
+		overflow: hidden;
+		padding: 90px 0;
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		margin-bottom: 50px;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 150px 0 250px;
+
+		&:after {
+			content: '';
+			width: 200px;
+			height: 8px;
+			background-color: $white;
+		}
+	}
+
+	&__total {
+		@include skewed(-7.5deg);
+
 		position: absolute;
-		left: 0;
 		top: 0;
-		right: 0;
 		bottom: 0;
-		z-index: 1;
+		right: 220px;
+		background-color: $white;
+		color: $blue;
+		width: 60px;
+		padding: 5px;
+		text-align: center;
+		vertical-align: middle;
 	}
 }
-

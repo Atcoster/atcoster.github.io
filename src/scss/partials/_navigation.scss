@@ -8,7 +8,7 @@
 	&__item {
 		margin-bottom: 60px;
 
-		&:nth-child( 3 ) {
+		&:last-child {
 			margin-bottom: 0;
 		}
 	}
@@ -25,23 +25,19 @@
 
 			.#{$navIcon}--home {
 				background-image: svg-url-with-replaced-fill($svg-icon-home, $gray--dark, $blue);
-				transform: scale(1.1);
 			}
 
 			.#{$navIcon}--about {
 				background-image: svg-url-with-replaced-fill($svg-icon-about, $gray--dark, $blue);
-				transform: scale(1.1);
 			}
 
 			.#{$navIcon}--projects {
 				background-image: svg-url-with-replaced-fill($svg-icon-projects, $gray--dark, $blue);
-				transform: scale(1.1);
 			}
 
 			.#{$navText} {
 				display: block;
 				opacity: 1;
-				color: $blue;
 			}
 		}
 	}
@@ -49,7 +45,7 @@
 	&__icon {
 		background-position: center;
 		background-repeat: no-repeat;
-		transition: all 0.5s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		width: 25px;
 
 		&--home {
@@ -72,10 +68,12 @@
 		display: none;
 		opacity: 0;
 		left: 35px;
-		padding: 0 20px 0 15px;
+		top: -5px;
+		padding: 5px 15px;
 		background-color: $white;
-		color: $gray--dark;
-		animation: text-anim 1s alternate backwards;
+		color: $blue;
+		border-right: 2px solid $blue;
+		animation: text-anim 1s ease backwards;
 	}
 
 	@keyframes text-anim {

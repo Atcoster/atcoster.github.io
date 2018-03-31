@@ -6,7 +6,7 @@ class Story extends Component {
 		super( props );
 
 		this.state = {
-			page : 'STORY!'
+			pageName : 'STORY!'
 		}
 	}
 
@@ -15,7 +15,7 @@ class Story extends Component {
 			<div className='story'>
 				<article className='story__content'>
 					<h2 className='story__title'>
-						{ this.state.page }
+						{ this.state.pageName }
 					</h2>
 					<p className='story__text'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo hic voluptas, omnis amet officiis

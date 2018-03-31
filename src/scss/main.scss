@@ -18,9 +18,14 @@
 @import 'pages/about';
 @import 'pages/projects';
 
+//subpages
+@import 'pages/subpages/story';
+@import 'pages/subpages/skills';
+
 // Partials
 @import 'partials/logo';
 @import 'partials/navigation';
 @import 'partials/social';
-@import 'partials/story';
-@import 'partials/skills';
+@import 'partials/project';
+@import 'partials/slider';
+@import 'partials/button';

@@ -8,7 +8,7 @@
 	white-space: pre-line;
 
 	&:before {
-		@include background-opacity($gray--dark, 0.8);
+		@include background-opacity($gray--dark, 0.6);
 		@include pos-absolute-wide();
 	}
 

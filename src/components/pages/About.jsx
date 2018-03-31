@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Story from '../partials/Story';
-import Skills from '../partials/Skills';
+import Story from './subpages/Story';
+import Skills from './subpages/Skills';
 
 class About extends Component {
 

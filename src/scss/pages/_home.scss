@@ -2,13 +2,12 @@
 	@include z-pos-back();
 
 	display: flex;
-	padding: 140px 140px 140px 240px;
-	width: calc(100% - 80px);
-	height: 100%;
+	flex: 0 0 auto;
 	align-items: center;
+	width: 100%;
+	padding: 140px 140px 140px 240px;
 	background: url('./../assets/images/home_bg.jpg') no-repeat center;
 	background-size: cover;
-	white-space: pre-line;
 
 	&__content {
 		@include z-pos-front();

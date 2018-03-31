@@ -1,0 +1,239 @@
+{
+	"projects" : [
+		{
+			"name": "Project 1",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_1.jpg",
+				"all": [ "project_1.jpg", "project_1.jpg", "project_1.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 2",
+			"category": "App",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_2.jpg",
+				"all": [ "project_2.jpg", "project_2.jpg", "project_2.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 3",
+			"category": "Web App",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_3.jpg",
+				"all": [ "project_3.jpg", "project_3.jpg", "project_3.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 4",
+			"category": "Software",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_1.jpg",
+				"all": [ "project_1.jpg", "project_1.jpg", "project_1.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 5",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_2.jpg",
+				"all": [ "project_2.jpg", "project_2.jpg", "project_2.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 6",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_3.jpg",
+				"all": [ "project_3.jpg", "project_3.jpg", "project_3.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 7",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_1.jpg",
+				"all": [ "project_1.jpg", "project_1.jpg", "project_1.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 8",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_2.jpg",
+				"all": [ "project_2.jpg", "project_2.jpg", "project_2.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 9",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_3.jpg",
+				"all": [ "project_3.jpg", "project_3.jpg", "project_3.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 10",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_1.jpg",
+				"all": [ "project_1.jpg", "project_1.jpg", "project_1.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 11",
+			"category": "App",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_2.jpg",
+				"all": [ "project_2.jpg", "project_2.jpg", "project_2.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 12",
+			"category": "Web App",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_3.jpg",
+				"all": [ "project_3.jpg", "project_3.jpg", "project_3.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 13",
+			"category": "Software",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_1.jpg",
+				"all": [ "project_1.jpg", "project_1.jpg", "project_1.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 14",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_2.jpg",
+				"all": [ "project_2.jpg", "project_2.jpg", "project_2.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 15",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_3.jpg",
+				"all": [ "project_3.jpg", "project_3.jpg", "project_3.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 16",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_1.jpg",
+				"all": [ "project_1.jpg", "project_1.jpg", "project_1.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 17",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_2.jpg",
+				"all": [ "project_2.jpg", "project_2.jpg", "project_2.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		},
+		{
+			"name": "Project 18",
+			"category": "Website",
+			"link": "www.google.com",
+			"images": {
+				"thumb": "project_3.jpg",
+				"all": [ "project_3.jpg", "project_3.jpg", "project_3.jpg" ] 
+			},
+			"description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+			"techniques": "HTML5, CSS3, JavaScript, jQuery, Wordpress",
+			"year": "2017",
+			"disciplines": ["Frond-end Development", "Maintanance"]
+		}
+	]
+}
+

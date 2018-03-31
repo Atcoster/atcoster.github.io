@@ -1,0 +1,32 @@
+.button {
+	$root : button;
+
+	@include z-pos-front();
+	@include skewed(-21.5deg);
+
+	position: absolute;
+	right: -25px;
+	top: 35px;
+	width: 179px;
+	height: 48px;
+	border: none;
+	background-color: $white;
+	color: $blue;
+	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+
+	&__text {
+		text-transform: uppercase;
+		margin-right: 10px;
+	}
+
+	&__arrow {
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		background-image: svg-url-with-replaced-fill($svg-icon-right-arrow, $blue, $blue);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

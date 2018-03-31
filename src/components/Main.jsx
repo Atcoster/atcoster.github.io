@@ -45,7 +45,7 @@ class Main extends Component {
 
 	render() {
 		return (
-			<div className='main' ref= {( main ) => { this.main = main; } } onWheel= { this.handleScroll.bind( this ) } >
+			<div className='container' ref= {( main ) => { this.main = main; } } onWheel= { this.handleScroll.bind( this ) } >
 				<Header handleNavClick= { this.handleNavClick.bind( this ) }/>
 				<Home />
 				<About />

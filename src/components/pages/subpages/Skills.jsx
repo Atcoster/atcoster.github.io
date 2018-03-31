@@ -6,8 +6,8 @@ class Skills extends Component {
 		super( props );
 
 		this.state = {
-			page   : 'SKILLS',
-			skills : [
+			pageName : 'SKILLS',
+			skills   : [
 				'HTML5', 'CSS3', 'JavaScript', 'Angular', 'React',
 				'MongoDB', 'NodeJS', 'Sass/Scss', 'jQuery', 'Webpack',
 				'Express', 'Redux', 'Grunt', 'NPM',	'Git',
@@ -28,7 +28,7 @@ class Skills extends Component {
 			<div className='skills'>
 				<article className='skills__content'>
 					<h2 className='skills__title'>
-						{ this.state.page }
+						{ this.state.pageName }
 					</h2>
 					<ul className='skills__list'>
 						{
