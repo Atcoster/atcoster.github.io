@@ -3,25 +3,27 @@
 
 	@include skewed(7.5deg);
 
-	height: 500px;
 	position: relative;
-	margin-right: 85px;
+	margin-left: 6.5vw;
 	box-shadow: -10px 5px 15px 2px $blue--dark;
-	transition: all 0.5s ease;
+	transition: all 0.5s ease-in-out;
 	cursor: pointer;
 	flex: 0 0 auto;
-	width: 320px;
 	object-fit: cover;
 
-	&:last-child {
-		margin-right: 0;
+	// width: 320px;
+	// height: 500px;
+
+	width: 17vw;
+	height: 26vw;
+
+	&:first-child {
+		margin-left: 0;
 	}
 
 	&--active,
 	&:hover {
-		@include skewed(0deg);
-
-		transform: scale(1.1);
+		transform: skew(0deg) scale(1.1);
 		box-shadow: none;
 
 		.#{$root}__name {

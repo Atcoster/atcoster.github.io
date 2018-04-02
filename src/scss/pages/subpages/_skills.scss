@@ -27,9 +27,12 @@
 
 		&:after {
 			content: '';
-			width: 100px;
-			height: 8px;
 			background-color: $white;
+
+			// height: 8px;
+			// width: 100px;
+			height: 0.5vw;
+			width: 7vw;
 		}
 	}
 
@@ -43,6 +46,12 @@
 		overflow-x: hidden;
 
 		&::-webkit-scrollbar {
+			width: 10px;
+			background-color: $white;
+			border-radius: 10px;
+		}
+
+		&::-moz-scrollbar {
 			width: 10px;
 			background-color: $white;
 			border-radius: 10px;
@@ -68,6 +77,8 @@
 	}
 
 	&__item {
+		@include skewed(7.5deg);
+
 		margin: 10px;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
@@ -76,7 +87,6 @@
 		filter: grayscale(100%);
 		backface-visibility: hidden;
 		-webkit-font-smoothing: antialiased;
-		transform: skew(7.5deg);
 
 		&:hover {
 			filter: none;

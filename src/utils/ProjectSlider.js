@@ -8,7 +8,7 @@ const SLIDER = {
 			project.className = index === value ? 'project project--active' : 'project';
 		} )
 
-		slider.style.marginLeft = `${ -value * projectWidth - 85 }px`;
+		slider.style.marginLeft = `${ -value * ( projectWidth + 50 ) }px`;
 	}
 }
 
