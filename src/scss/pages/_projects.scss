@@ -6,6 +6,7 @@
 	background: url('./../assets/images/projects_bg.jpg') no-repeat center;
 	background-size: cover;
 	width: 100%;
+	overflow: hidden;
 
 	&:before {
 		@include background-opacity($blue);
