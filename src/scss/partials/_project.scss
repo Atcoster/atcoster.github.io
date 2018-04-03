@@ -10,12 +10,13 @@
 	cursor: pointer;
 	flex: 0 0 auto;
 	object-fit: cover;
-
-	// width: 320px;
-	// height: 500px;
-
-	width: 17vw;
+	width: 16vw;
 	height: 26vw;
+
+	@include breakpoint('lg') {
+		width: 14vw;
+		height: 22vw;
+	}
 
 	&:first-child {
 		margin-left: 0;
@@ -50,9 +51,9 @@
 
 		position: absolute;
 		width: 100%;
-		bottom: 10px;
-		left: 15px;
-		padding: 10px;
+		bottom: 1vw;
+		left: 1.1vw;
+		padding: 0.6vw;
 		background-color: $white;
 		color: $blue;
 		text-align: center;

@@ -1,14 +1,11 @@
-// Breakpoint setup for media queries
+// Breakpoints
 $breakpoints: (
-	'phone-small': 380px,
-	'phone': 400px,
-	'phone-wide': 480px,
-	'phablet': 560px,
-	'tablet-small': 640px,
-	'tablet': 768px,
-	'tablet-wide': 1024px,
-	'desktop-small': 1248px,
-	'desktop-regular': 1366px,
-	'desktop-large': 1920px,
-	'desktop-max': 2560px
+	'sm' : 480px,
+	'sm+': 640px,
+	'md' : 768px,
+	'md+': 1024px,
+	'lg':  1280px,
+	'lg+': 1440px,
+	'xl':  1600px,
+	'xl+': 1920px
 );

@@ -1,11 +1,12 @@
 .slider {
-	padding: 30px 150px 30px 250px;
+	// padding: 30px 150px 30px 250px;
+	padding: 3vw 15vw;
 	overflow: hidden;
 
 	&__list {
 		display: flex;
 		flex-wrap: nowrap;
-		margin-bottom: 80px;
+		margin-bottom: 4vw;
 		transition: all 0.5s ease;
 	}
 

@@ -3,8 +3,9 @@
 
 	display: flex;
 	width: 50%;
-	padding: 90px 185px;
+	padding: 5vw;
 	align-items: flex-start;
+	justify-content: center;
 
 	&:before {
 		@include background-opacity($gray--light);
@@ -21,65 +22,42 @@
 		@include skewed(7.5deg);
 
 		display: flex;
-		margin-bottom: 80px;
+		margin-bottom: 4vw;
 		align-items: center;
 		justify-content: space-between;
 
 		&:after {
 			content: '';
 			background-color: $white;
-
-			// height: 8px;
-			// width: 100px;
 			height: 0.5vw;
 			width: 7vw;
 		}
 	}
 
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		max-height: 550px;
-		max-width: 430px;
-		padding: 20px;
-		overflow-y: scroll;
-		overflow-x: hidden;
+		display: grid;
+		grid-gap: 5vw;
+		grid-template-columns: repeat(3, 1fr);
 
-		&::-webkit-scrollbar {
-			width: 10px;
-			background-color: $white;
-			border-radius: 10px;
+		@include breakpoint('md') {
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 4vw;
 		}
 
-		&::-moz-scrollbar {
-			width: 10px;
-			background-color: $white;
-			border-radius: 10px;
+		@include breakpoint('md+') {
+			grid-template-columns: repeat(5, 1fr);
+			grid-gap: 3vw;
 		}
 
-		&::-webkit-scrollbar-track {
-			box-shadow: inset 0 0 2px $gray--light;
-			border-radius: 10px;
-			background-color: $blue;
-			border-left: 2px solid $white;
-			border-right: 2px solid $white;
-		}
-
-		&::-webkit-scrollbar-thumb {
-			border-radius: 10px;
-			background-color: $gray--dark;
-			box-shadow: 3px 3px -10px rgba(0, 0, 0, 0.75) inset;
-		}
-
-		&::-webkit-scrollbar-thumb:hover {
-			background: $blue;
+		@include breakpoint('lg') {
+			grid-template-columns: repeat(6, 1fr);
+			grid-gap: 1vw;
 		}
 	}
 
 	&__item {
 		@include skewed(7.5deg);
 
-		margin: 10px;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
 		-webkit-filter: blur(0) grayscale(100%);
@@ -87,10 +65,24 @@
 		filter: grayscale(100%);
 		backface-visibility: hidden;
 		-webkit-font-smoothing: antialiased;
+		width: 4.8vw;
+		height: 4.8vw;
+		z-index: 98;
+
+		@include breakpoint('lg') {
+			grid-template-columns: repeat(6, 1fr);
+			width: 3.8vw;
+			height: 3.8vw;
+		}
 
 		&:hover {
 			filter: none;
 			transform: skew(7.5deg) scale(2.1);
+			z-index: 99;
+		}
+
+		img {
+			width: 100%;
 		}
 	}
 }

@@ -7,9 +7,9 @@ class ProjectDetails extends Component {
 		super( props );
 
 		this.state = {
-			project : this.props.data,
-			id      : '',
-			show    : ''
+			projects : this.props.data,
+			id       : 1,
+			show     : ''
 		}
 	}
 
@@ -17,11 +17,6 @@ class ProjectDetails extends Component {
 		if ( nextProps.show !== this.state.show ) {
 			this.setState( {
 				show : nextProps.show
-			} );
-		}
-		if ( nextProps.data !== this.state.project ) {
-			this.setState( {
-				project : nextProps.data
 			} );
 		}
 		if ( nextProps.id !== this.state.id ) {
@@ -51,12 +46,14 @@ class ProjectDetails extends Component {
 	}
 
 	render() {
-		let project      = this.state.project,
+		let project      = this.state.projects[ this.state.id ],
 			activeClass  = this.state.show ? ' details--active' : '',
 			descriptions = [],
 			disciplines  = [],
 			techniques   = [],
 			images       = [];
+
+			console.log( this.state.id );
 
 		[].forEach.call( project.description, ( desc, index ) => {
 			descriptions.push( <p key={ index }> { desc } </p> );
@@ -80,9 +77,13 @@ class ProjectDetails extends Component {
 			<div className={`details ${ activeClass }`} onClick={ this.closeProductDetails.bind( this )}>
 				<div className='details__wrapper'>
 					<div className='details__control'>
-						<span className='details__icon details__icon--larrow' onClick={ this.handleActiveProject.bind( this ) }></span>
-						<span className='details__icon details__icon--rarrow' onClick={ this.handleActiveProject.bind( this ) }></span>
-						<span className='details__icon details__icon--close' onClick={ this.closeProductDetails.bind( this ) }></span>
+						<span className={`details__icon details__icon--larrow${ 0 >= this.state.id ? ' details__icon--off' : '' }`}
+						      onClick={ this.handleActiveProject.bind( this ) }></span>
+						<span className={`details__icon details__icon--rarrow
+						      ${ this.state.id >= this.state.projects.length - 1 ? ' details__icon--off' : '' }`}
+						      onClick={ this.handleActiveProject.bind( this ) }></span>
+						<span className='details__icon details__icon--close'
+						      onClick={ this.closeProductDetails.bind( this ) }></span>
 					</div>
 					<article className='details__info'>
 						<h2 className='details__name'> { project.name } </h2>
@@ -108,7 +109,7 @@ class ProjectDetails extends Component {
 }
 
 ProjectDetails.propTypes = {
-	data                : PropTypes.object.isRequired,
+	data                : PropTypes.array.isRequired,
 	closeProductDetails : PropTypes.func.isRequired,
 	handleActiveProject : PropTypes.func.isRequired,
 	show                : PropTypes.bool.isRequired,

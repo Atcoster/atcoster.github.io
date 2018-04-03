@@ -1,12 +1,14 @@
 .projects {
 	@include z-pos-back();
 
-	display: block;
+	display: flex;
 	flex: 0 0 auto;
 	background: url('./../assets/images/projects_bg.jpg') no-repeat center;
 	background-size: cover;
 	width: 100%;
+	padding: 5vw 0;
 	overflow: hidden;
+	align-items: center;
 
 	&:before {
 		@include background-opacity($blue);
@@ -17,21 +19,20 @@
 		@include z-pos-front();
 
 		overflow: hidden;
-		padding: 90px 0;
 	}
 
 	&__title {
 		position: relative;
 		display: flex;
-		margin-bottom: 50px;
+		margin-bottom: 4vw;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 150px 0 250px;
+		padding: 0 15vw;
 
 		&:after {
 			content: '';
-			width: 200px;
-			height: 8px;
+			width: 14vw;
+			height: 0.5vw;
 			background-color: $white;
 		}
 	}
@@ -42,7 +43,7 @@
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		right: 220px;
+		right: 20vw;
 		background-color: $white;
 		color: $blue;
 		text-align: center;

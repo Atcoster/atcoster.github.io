@@ -9,15 +9,11 @@ class Skills extends Component {
 			pageName : 'SKILLS',
 			skills   : [
 				'HTML5', 'CSS3', 'JavaScript', 'Angular', 'React',
-				'MongoDB', 'NodeJS', 'Sass/Scss', 'jQuery', 'Webpack',
-				'Express', 'Redux', 'Grunt', 'NPM',	'Git',
+				'MongoDB', 'NodeJS', 'Sass_Scss', 'jQuery', 'Webpack',
+				'Express', 'Redux', 'Grunt', 'NPM',	'Git', 'Java',
 				'JSON', 'Bootstrap', 'Ionic', 'Firebase', 'SQL',
-				'C#', 'PHP', 'UI', 'API', 'Wordpress', 'Photoshop',
-				'Illustrator', 'Trello', 'Scrum', 'Slack', 'NoSql',
-				'bla', 'bla', 'bla', 'bla', 'bla', 'bla',
-				'bla', 'bla', 'bla', 'bla', 'bla', 'bla',
-				'bla', 'bla', 'bla', 'bla', 'bla', 'bla',
-				'bla', 'bla'
+				'CSHARP', 'PHP', 'UX_UI', 'API', 'Swift', 'Android', 'Wordpress',
+				'Photoshop', 'Illustrator', 'Trello', 'Scrum', 'Slack', 'NoSql', 'XML'
 			]
 		}
 	}
@@ -34,14 +30,10 @@ class Skills extends Component {
 						{
 							this.state.skills.map(( skill, index ) => {
 								const SKILL   = skill.toLowerCase();
-								const DEFAULT = 'noimage.svg';
-								const ICON    = 'html5'      === SKILL ||
-												'css3'       === SKILL ||
-												'javascript' === SKILL ? `${ SKILL }.svg` : DEFAULT;
 
 								return (
 									<li key= { index } className='skills__item' >
-										<img src= {`./src/assets/icons/skills/${ ICON }`} alt= { SKILL }/>
+										<img src= {`./src/assets/icons/skills/${ SKILL }.svg`} alt= { SKILL }/>
 									</li>
 								)
 							} )

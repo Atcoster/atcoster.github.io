@@ -43,8 +43,7 @@ class Projects extends Component {
 	render() {
 		let projects = this.state.projects,
 			total    = this.state.projects.length,
-			activeID = this.state.activeID,
-			project  = projects[ activeID ];
+			activeID = this.state.activeID
 
 		return (
 			<section className='projects'>
@@ -55,7 +54,7 @@ class Projects extends Component {
 					</h2>
 					<Slider data={ projects } activeID={ activeID } handleActiveProject={ this.handleActiveProject.bind( this ) }/>
 				</div>
-				<ProjectDetails data={ project }
+				<ProjectDetails data={ projects }
 								id={ activeID }
 								show={ this.state.detailActive }
 								closeProductDetails={ this.closeProductDetails.bind( this )}

@@ -3,9 +3,9 @@
 
 	display: flex;
 	width: 50%;
-	padding: 90px 185px;
+	padding: 5vw;
 	align-items: flex-start;
-	white-space: pre-line;
+	justify-content: center;
 
 	&:before {
 		@include background-opacity($gray--dark, 0.6);
@@ -14,14 +14,15 @@
 
 	&__content {
 		@include z-pos-front();
-		@include skewed(7.5deg);
 
 		padding: 10px;
 	}
 
 	&__title {
+		@include skewed(7.5deg);
+
 		display: flex;
-		margin-bottom: 100px;
+		margin-bottom: 4vw;
 		align-items: center;
 		justify-content: space-between;
 
@@ -37,6 +38,6 @@
 	}
 
 	&__text:last-child {
-		margin-top: 20px;
+		margin-top: 1.2vw;
 	}
 }

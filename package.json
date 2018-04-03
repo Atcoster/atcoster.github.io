@@ -4,7 +4,7 @@
 	"description": "This is my portfolio",
 	"scripts": {
 		"dev": "webpack-dev-server --mode development && eslint && stylelint",
-		"prod": "webpack -p"
+		"prod": "webpack --mode production"
 	},
 	"repository": "https://github.com/Atcoster/atcoster.github.io.git",
 	"keywords": [
