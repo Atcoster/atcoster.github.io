@@ -1,0 +1,25 @@
+@mixin range-input-track() {
+	background: $white;
+	height: 0.4vw;
+}
+
+@mixin range-input-thumb() {
+	@include skewed(-15.5deg);
+
+	-webkit-appearance: none;
+	height: 3vw;
+	width: 3vw;
+	background: $blue;
+	border: 3px solid $white;
+	margin-top: -1.2vw;
+	max-height: 35px;
+	max-width: 35px;
+
+	@include breakpoint('md+') {
+		margin-top: -1.2vw;
+	}
+
+	@include breakpoint('lg+') {
+		margin-top: -0.8vw;
+	}
+}

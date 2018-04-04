@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Nav from '../../utils/Nav';
+import DetectMobile from '../../utils/DetectMobile.js';
 
 class Navigation extends Component {
 
@@ -8,8 +9,22 @@ class Navigation extends Component {
 		super( props );
 
 		this.state = {
-			links : [ 'home', 'about', 'projects' ]
+			links : []
 		}
+	}
+
+	componentDidMount() {
+		let pages;
+
+		if ( DetectMobile.os()) {
+			pages = [ 'home', 'story', 'skills', 'projects' ];
+		} else {
+			pages = [ 'home', 'about', 'projects' ];
+		}
+
+		this.setState( {
+			links : pages
+		} )
 	}
 
 	handleClick( event ) {

@@ -1,3 +1,5 @@
+import DetectMobile from './DetectMobile.js';
+
 const SCROLL = {
 	toSection : ( event, duration ) => {
 		let section     = event.currentTarget.href.split( '#' )[ 1 ].toString(),
@@ -8,6 +10,16 @@ const SCROLL = {
 			currentTime = 0,
 			increment   = 20,
 			scrollTo    = elemRect.left;
+
+		let isMobile = DetectMobile.os();
+
+		if ( isMobile ) {
+			let header       = document.querySelector( '.header' ),
+			    headerheight = header.getBoundingClientRect().height;
+
+			offset   = window.pageYOffset;
+			scrollTo = elemRect.top - headerheight;
+		}
 
 		/* t = current time / o = offset / s = scrollTo / d = duration */
 		let easeInOut = ( t, o, s, d ) => {
@@ -26,7 +38,11 @@ const SCROLL = {
 
 			let steps = easeInOut( currentTime, offset, scrollTo, duration );
 
-			window.scrollTo( steps, 0 );
+			if ( isMobile ) {
+				window.scrollTo( 0, steps );
+			} else {
+				window.scrollTo( steps, 0 );
+			}
 
 			if ( currentTime < duration ) {
 				setTimeout( step, increment );

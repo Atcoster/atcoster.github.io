@@ -33,4 +33,29 @@
 			}
 		}
 	}
+
+	@include breakpoint-between( 'sm-', 'sm+') {
+		flex-direction: row;
+		position: fixed;
+		justify-content: center;
+		align-items: center;
+		background-color: $white;
+		width: 100%;
+		padding: 4vw 8vw;
+		bottom: 0;
+		z-index: 999;
+
+		&__item {
+			margin: 0 0 0 5.5vw;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		&__icon {
+			height: 7vw;
+			width: 7vw;
+		}
+	}
 }

@@ -53,8 +53,6 @@ class ProjectDetails extends Component {
 			techniques   = [],
 			images       = [];
 
-			console.log( this.state.id );
-
 		[].forEach.call( project.description, ( desc, index ) => {
 			descriptions.push( <p key={ index }> { desc } </p> );
 		} );

@@ -51,7 +51,7 @@
 
 		@include breakpoint('lg') {
 			grid-template-columns: repeat(6, 1fr);
-			grid-gap: 1vw;
+			grid-gap: 2vw;
 		}
 	}
 
@@ -65,9 +65,10 @@
 		filter: grayscale(100%);
 		backface-visibility: hidden;
 		-webkit-font-smoothing: antialiased;
-		width: 4.8vw;
-		height: 4.8vw;
+		width: 100%;
+		height: 100%;
 		z-index: 98;
+		text-align: center;
 
 		@include breakpoint('lg') {
 			grid-template-columns: repeat(6, 1fr);
@@ -80,9 +81,46 @@
 			transform: skew(7.5deg) scale(2.1);
 			z-index: 99;
 		}
+	}
 
-		img {
+	@include breakpoint-between( 'sm-', 'sm+') {
+		grid-template-columns: repeat(4, 1fr);
+		width: 100%;
+		min-height: 100vh;
+		padding: 10vw 8vw;
+		grid-auto-rows: 1fr;
+
+		&__content {
 			width: 100%;
+			padding: 0;
+		}
+
+		&__title {
+			@include skewed(0);
+
+			font-size: 11.9vw;
+			line-height: 9.1vw;
+			margin-bottom: 8vw;
+
+			&:after {
+				height: 0.7vw;
+				width: 15vw;
+			}
+		}
+
+		&__item {
+			@include skewed(0);
+
+			transition: none;
+			-webkit-filter: blur(0) grayscale(0);
+			-ms-filter: grayscale(0);
+			filter: grayscale(0);
+			width: 100%;
+			height: 100%;
+
+			&:hover {
+				transform: skew(0) scale(0);
+			}
 		}
 	}
 }

@@ -125,11 +125,11 @@
 		}
 
 		&--off {
-			background-image: svg-url-with-replaced-fill($svg-icon-right-arrow, $blue, $gray--light);
+			opacity: 0.4;
 			cursor: not-allowed;
 
 			&:hover {
-				background-image: svg-url-with-replaced-fill($svg-icon-right-arrow, $blue, $gray--light);
+				background-image: svg-url-with-replaced-fill($svg-icon-right-arrow, $blue, $gray--dark);
 			}
 		}
 	}

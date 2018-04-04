@@ -1,34 +1,62 @@
+import DetectMobile from './DetectMobile.js';
+
 const NAV = {
 	activeHandler : ( event ) => {
-		let originalClass      = 'nav__link',
-			items              = document.querySelectorAll( `.${originalClass}` ),
-			activeClass        = ` ${originalClass}--active`,
-			offset             = window.pageXOffset,
-			homeRect           = document.querySelector( '.home' ).getBoundingClientRect(),
-			aboutRect          = document.querySelector( '.about' ).getBoundingClientRect(),
-			projectsRect       = document.querySelector( '.projects' ).getBoundingClientRect();
+		let isMobile = DetectMobile.os(),
+			originalClass = 'nav__link',
+		    items         = document.querySelectorAll( `.${originalClass}` ),
+		    activeClass   = ` ${originalClass}--active`,
+		    offset        = isMobile ? window.pageYOffset : window.pageXOffset,
+		    homeRect      = document.querySelector( '.home' ).getBoundingClientRect(),
+		    aboutRect     = document.querySelector( '.about' ).getBoundingClientRect(),
+		    storyRect     = document.querySelector( '.story' ).getBoundingClientRect(),
+		    skillsRect    = document.querySelector( '.skills' ).getBoundingClientRect(),
+		    projectsRect  = document.querySelector( '.projects' ).getBoundingClientRect(),
+		    activeSection = '';
 
 		for ( let item of items ) {
-			item.className = originalClass;
+			if ( 0 < item.className.indexOf( 'active' )) {
+				item.className = originalClass;
+			}
 		}
 
 		if ( event ) {
 			event.currentTarget.className = originalClass + activeClass;
 		} else {
-			let skewedWidth        = 250,
-				homeFixedWidth     = homeRect.width - skewedWidth,
-				aboutFixedWidth    = aboutRect.width - skewedWidth,
-				projectsFixedWidth = projectsRect.width - skewedWidth,
-				activeSection      = '';
+			if ( !isMobile ) {
+				let	skewedWidth        = 250,
+				    homeFixedWidth     = homeRect.width - skewedWidth,
+				    aboutFixedWidth    = aboutRect.width - skewedWidth,
+				    projectsFixedWidth = projectsRect.width - skewedWidth;
 
-			if ( offset < homeFixedWidth )
-				activeSection = 'home';
+				if ( offset < homeFixedWidth )
+					activeSection = 'home';
 
-			if ( offset >= homeFixedWidth && offset <= homeFixedWidth + aboutFixedWidth )
-				activeSection = 'about';
+				if ( offset >= homeFixedWidth && offset <= homeFixedWidth + aboutFixedWidth )
+					activeSection = 'about';
 
-			if ( offset > homeFixedWidth + aboutFixedWidth && offset <= homeFixedWidth + aboutFixedWidth + projectsFixedWidth )
-				activeSection = 'projects';
+				if ( offset > homeFixedWidth + aboutFixedWidth && offset <= homeFixedWidth + aboutFixedWidth + projectsFixedWidth )
+					activeSection = 'projects';
+			} else {
+				let header         = document.querySelector( '.header' ),
+				    headerheight   = header.getBoundingClientRect().height,
+				    homeHeight     = homeRect.height - headerheight,
+				    storyHeight    = storyRect.height - headerheight,
+				    skillsHeight   = skillsRect.height - headerheight,
+				    projectsHeight = projectsRect.height - headerheight;
+
+				if ( offset <= homeHeight )
+					activeSection = 'home';
+
+				if ( offset > homeHeight && offset < homeHeight + storyHeight )
+					activeSection = 'story';
+
+				if ( offset >= homeHeight + storyHeight && offset <= homeHeight + storyHeight + skillsHeight )
+					activeSection = 'skills';
+
+				if ( offset >= homeHeight + storyHeight + skillsHeight && offset <= homeHeight + storyHeight + skillsHeight + projectsHeight )
+					activeSection = 'projects';
+			}
 
 			for ( let item of items ) {
 				let itemHref = item.href.split( '#' )[ 1 ].toString();

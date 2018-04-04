@@ -35,6 +35,14 @@
 				background-image: svg-url-with-replaced-fill($svg-icon-projects, $gray--dark, $blue);
 			}
 
+			.#{$navIcon}--story {
+				background-image: svg-url-with-replaced-fill($svg-icon-story, $gray--dark, $blue);
+			}
+
+			.#{$navIcon}--skills {
+				background-image: svg-url-with-replaced-fill($svg-icon-skills, $gray--dark, $blue);
+			}
+
 			.#{$navText} {
 				display: block;
 				opacity: 1;
@@ -45,6 +53,7 @@
 	&__icon {
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: cover;
 		transition: all 0.3s ease-in-out;
 		width: 25px;
 
@@ -58,6 +67,14 @@
 
 		&--projects {
 			background-image: svg-url-with-replaced-fill($svg-icon-projects, $gray--dark, $gray--dark);
+		}
+
+		&--story {
+			background-image: svg-url-with-replaced-fill($svg-icon-story, $gray--dark, $gray--dark);
+		}
+
+		&--skills {
+			background-image: svg-url-with-replaced-fill($svg-icon-skills, $gray--dark, $gray--dark);
 		}
 	}
 
@@ -86,6 +103,31 @@
 
 		to {
 			opacity: 1;
+		}
+	}
+
+	@include breakpoint-between( 'sm-', 'sm+') {
+		flex-direction: row;
+
+		&__item {
+			margin-bottom: 0;
+			margin-left: 8vw;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		&__link {
+
+			&--active,
+			&:hover {
+
+				.#{$navText} {
+					display: none;
+					opacity: 0;
+				}
+			}
 		}
 	}
 }

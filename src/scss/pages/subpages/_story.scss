@@ -29,9 +29,6 @@
 		&:after {
 			content: '';
 			background-color: $white;
-
-			// height: 8px;
-			// width: 100px;
 			height: 0.5vw;
 			width: 7vw;
 		}
@@ -39,5 +36,32 @@
 
 	&__text:last-child {
 		margin-top: 1.2vw;
+	}
+
+	@include breakpoint-between( 'sm-', 'sm+') {
+		width: 100%;
+		min-height: 100vh;
+		padding: 10vw 8vw;
+
+		&__content {
+			padding: 0;
+		}
+
+		&__title {
+			@include skewed(0);
+
+			font-size: 11.9vw;
+			line-height: 9.1vw;
+			margin-bottom: 8vw;
+
+			&:after {
+				height: 0.7vw;
+				width: 15vw;
+			}
+		}
+
+		&__text:last-child {
+			margin-top: 5.2vw;
+		}
 	}
 }

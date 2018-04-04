@@ -8,4 +8,13 @@
 	background-size: cover;
 	width: 100%;
 	margin: 0 -6vw;
+
+	@include breakpoint-between( 'sm-', 'sm+') {
+		@include z-pos-front();
+		@include skewed(0);
+
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+	}
 }

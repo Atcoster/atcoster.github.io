@@ -8,4 +8,12 @@
 	padding: 30px 17px;
 	background-color: $white;
 	position: fixed;
+
+	@include breakpoint-between( 'sm-', 'sm+') {
+		width: 100vw;
+		height: auto;
+		flex-direction: row;
+		align-items: center;
+		padding: 2vw 8vw;
+	}
 }
