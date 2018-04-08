@@ -10,20 +10,10 @@ import Projects from './pages/Projects';
 
 class Main extends Component {
 
-	constructor( props ) {
-		super( props );
-
-		this.state = {
-			test : 0
-		}
-	}
-
 	componentDidMount() {
-		Nav.activeHandler();
-
-		if ( DetectMobile.os() ) {
+		if ( DetectMobile.os()) {
 			let social    = document.querySelector( '.social' );
-			let container = document.querySelector( '.container');
+			let container = document.querySelector( '.container' );
 
 			container.appendChild( social );
 		}

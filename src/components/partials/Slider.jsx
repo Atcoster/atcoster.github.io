@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Project from '../partials/Project';
 import ProjectSlider from '../../utils/ProjectSlider';
+import Swipe from 'react-easy-swipe';
 
 class Slider extends Component {
 
@@ -29,7 +30,7 @@ class Slider extends Component {
 		} )
 	}
 
-	onChange( event ) {
+	onChangeInput( event ) {
 		let value = parseInt( event.target.value - 1 );
 
 		ProjectSlider.scrollToProject( value );
@@ -40,12 +41,55 @@ class Slider extends Component {
 		this.props.handleActiveProject( value, 'onClick' );
 	}
 
+	onSwipeMove( position ) {
+		let slider        = document.querySelector( '.slider' );
+		let sliderList    = document.querySelector( '.slider__list' );
+		let allItems      = document.querySelectorAll( '.project' );
+		let min           = slider.getBoundingClientRect().left;
+		let marginLeft    = parseInt( sliderList.style.marginLeft, 10 );
+		let posX          = position.x;
+		let sliderWidth   = 0;
+		let swipe         = '';
+
+		[].forEach.call( allItems, ( item ) => {
+			let itemWith = item.getBoundingClientRect().width;
+				sliderWidth += itemWith;
+		} );
+
+		if ( 0 > posX ) {
+			posX  = -50;
+			swipe = 'left';
+		} else {
+			posX  = 50;
+			swipe = 'right';
+		}
+
+		if ( marginLeft + sliderWidth <= min + 50 ) {
+			if ( 'left' === swipe ) {
+				return;
+			}
+		}
+
+		if ( marginLeft >= min ) {
+			if ( 'right' === swipe ) {
+				return;
+			}
+		}
+
+		sliderList.style.marginLeft = `${ marginLeft + posX }px`;
+	}
+
 	render() {
 		let total = this.state.projects.length;
 
+		const sliderStyle = {
+			marginLeft : 0
+		};
+
 		return (
 			<div className='slider'>
-				<ul className='slider__list'>
+			<Swipe onSwipeMove={ this.onSwipeMove }>
+				<ul className='slider__list' style={ sliderStyle }>
 					{
 						this.state.projects.map(( project, index ) => {
 							let isActive = this.state.value === index ? true : false;
@@ -60,6 +104,7 @@ class Slider extends Component {
 						} )
 					}
 				</ul>
+			</Swipe>
 				<div className='slider__control'>
 					<input
 						className='slider__input'
@@ -68,7 +113,7 @@ class Slider extends Component {
 						max={ total }
 						steps='1'
 						value={ this.state.value + 1 }
-						onChange= { this.onChange.bind( this ) }
+						onChange= { this.onChangeInput.bind( this ) }
 					/>
 				</div>
 			</div>

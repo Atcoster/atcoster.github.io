@@ -27,7 +27,11 @@ class Project extends Component {
 
 	render() {
 		let project  = this.props.data,
-			isActive = this.state.isActive;
+			isActive = this.state.isActive,
+			name     = project.name,
+			company  = project.company.replace( /\s+/g, '' ).toLowerCase(),
+			folder   = project.folder.toLowerCase(),
+			thumb    = project.images.thumb.toLowerCase();
 
 		return (
 			<li className={`project${ isActive ? ' project--active' : ''}`} onClick={ this.handleOnclick.bind( this ) }>
@@ -35,7 +39,7 @@ class Project extends Component {
 				<h4 className='project__name'>
 					<span className="project__name__text">{ project.name }</span>
 				</h4>
-				<img className='project__image' src={`./src/assets/images/projects/${project.folder}/${project.images.thumb}`} alt={ project.name }/>
+				<img className='project__image' src={`./src/assets/images/projects/${ company }/${ folder }/${ thumb }`} alt={ name }/>
 			</li>
 		)
 	}

@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
+import DetectMobile from '../../utils/DetectMobile';
 
 class Home extends Component {
+
+	componentDidMount() {
+		let headerHight = document.querySelector( '.header' ).getBoundingClientRect().height;
+		let home        = document.querySelector( '.home' );
+		let paddingTop  = headerHight + 20;
+		let isMobile    = DetectMobile.os();
+
+		if ( isMobile ) {
+			home.style.paddingTop = `${ paddingTop }px`;
+		}
+	}
 
 	render() {
 		return (
@@ -9,11 +21,12 @@ class Home extends Component {
 					<h1 className='home__title'>HOLA!</h1>
 					<h3 className='home__subtitle'>I am Andji, a Front-end Developer.</h3>
 					<p className='home__text'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo hic voluptas, omnis amet officiis
-						laboriosam delectus quae exercitationem maiores libero quod mollitia labore, eum architecto odio.
-						Fuga corporis delectus nostrum magni minus, eum ab dolor architecto nihil ea maiores eligendi qui
-						sequi provident vel fugiat perferendis nesciunt beatae aut perspiciatis reiciendis ratione! Iusto
-						consequuntur dolor soluta cum, atque animi ab.
+						From an early age I have been very passionate about programming and technology in general.
+						In recent years I have worked on Front-end as well as Back-end projects, but my passion is on the Front-end.
+						My knowledge lies mainly in the area of HTML(5), Sass/Scss combined with BEM, JavaScript (ES5 / ES6)
+						and I have experience with Angular / TypeScript, ReactJS and Node.js.
+						During the development of applications I like working in Scrum teams and I pay attention to details to
+						get the best out of the project. I am also creative, curious / eager to learn and enthusiastic.
 					</p>
 				</article>
 			</section>

@@ -3,8 +3,7 @@ import DetectMobile from './DetectMobile.js';
 const NAV = {
 	activeHandler : ( event ) => {
 		let isMobile = DetectMobile.os(),
-			originalClass = 'nav__link',
-		    items         = document.querySelectorAll( `.${originalClass}` ),
+		    originalClass = 'nav__link',
 		    activeClass   = ` ${originalClass}--active`,
 		    offset        = isMobile ? window.pageYOffset : window.pageXOffset,
 		    homeRect      = document.querySelector( '.home' ).getBoundingClientRect(),
@@ -12,13 +11,16 @@ const NAV = {
 		    storyRect     = document.querySelector( '.story' ).getBoundingClientRect(),
 		    skillsRect    = document.querySelector( '.skills' ).getBoundingClientRect(),
 		    projectsRect  = document.querySelector( '.projects' ).getBoundingClientRect(),
-		    activeSection = '';
+		    items         = document.querySelectorAll( `.${originalClass}` ),
+			activeSection = '';
 
 		for ( let item of items ) {
 			if ( 0 < item.className.indexOf( 'active' )) {
 				item.className = originalClass;
 			}
 		}
+
+		// console.log( isMobile, offset );
 
 		if ( event ) {
 			event.currentTarget.className = originalClass + activeClass;
@@ -57,12 +59,15 @@ const NAV = {
 				if ( offset >= homeHeight + storyHeight + skillsHeight && offset <= homeHeight + storyHeight + skillsHeight + projectsHeight )
 					activeSection = 'projects';
 			}
+		}
 
-			for ( let item of items ) {
-				let itemHref = item.href.split( '#' )[ 1 ].toString();
-				if ( itemHref === activeSection ) {
-					item.className = originalClass + activeClass;
-				}
+		// console.log( 'offset', offset );
+		// console.log( 'activesection', activeSection );
+
+		for ( let item of items ) {
+			let itemHref = item.href.split( '#' )[ 1 ].toString();
+			if ( itemHref === activeSection ) {
+				item.className = originalClass + activeClass;
 			}
 		}
 	}

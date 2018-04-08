@@ -1,310 +1,145 @@
 {
 	"projects" : [
 		{
-			"name": "Project 1",
+			"name": "Portfolio",
+			"company": "Competa",
+			"client": "A.Coster",
 			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
+			"links": ["https://atcoster.github.io/"],
+			"folder": "acoster",
 			"images": {
 				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
+				"showcase": ["image1.jpg", "image2.jpg", "image3.jpg"]
 			},
 			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
+				"The idea of this portfolio was to create a showcase of the projects I've worked on in the past few years at different companies and for different clients. I tried to keep it as simple as possible"
 			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
+			"techniques": ["HTML5", "SASS/SCSS", "JavaScript", "React", "Webpack", "JSON"],
+			"year": "2018",
+			"disciplines": ["Front-end Development", "UX Development"],
+			"finished": true,
+			"show": true
 		},
 		{
-			"name": "Project 2",
-			"category": "App",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 3",
+			"name": "Headcount",
+			"company": "Competa",
+			"client": "Brightwave",
 			"category": "Web App",
-			"link": "www.google.com",
-			"folder": "project1",
+			"links": [],
+			"folder": "brightwave",
 			"images": {
 				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
+				"showcase": ["image1.jpg", "image2.jpg", "image3.jpg"]
 			},
 			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
+				"In this project i acted as a part of a small Scrum team, co-responsible for the construction of the dashboard for the HR department of Brightwave. The number of employees and associated information are stored and processed. The data then had to be translated into different graphs."
 			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
+			"techniques": ["HTML5", "SASS/SCSS", "JavaScript", "React", "ReduxJS", "ExpressJS", "NodeJS", "ChartJS", "MongoDB", "Webpack", "JSON"],
+			"year": "2018",
+			"disciplines": ["Front-end Development", "Back-end Development"],
+			"finished": false,
+			"show": true
 		},
 		{
-			"name": "Project 4",
-			"category": "Software",
-			"link": "www.google.com",
-			"folder": "project1",
+			"name": "Ship Rating",
+			"company": "Teqplay",
+			"client": "Port of Rotterdam",
+			"category": "Mobile App",
+			"links": [],
+			"folder": "shiprating",
 			"images": {
 				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
+				"showcase": ["image1.jpg", "image2.jpg", "image3.jpg"]
 			},
 			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
+				"At Teqplay I have developed a system for the Port of Rotterdam Authority where shippers within the port are motivated to comply with the rules and procedures. I was responsible for researching how the problem could be solved within an application. From this came that a mobile app would be the most desirable.",
+				"The mobile app I have developed, among other things, using Gamification, Ionic, Angular / TypeScript and Firebase."
 			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
+			"techniques": ["HTML5", "CSS3", "JavaScript", "Ionic", "Angular", "TypeScript", "Firebase", "JSON"],
 			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
+			"disciplines": ["Front-end", "Back-end Development", "Designer", "Researcher"],
+			"finished": true,
+			"show": true
 		},
 		{
-			"name": "Project 5",
+			"name": "S.C. Website",
+			"company": "Spil Creative",
+			"client": "Spil Creative",
 			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
+			"links": ["https://www.spil.us"],
+			"folder": "website",
 			"images": {
 				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
+				"showcase": ["image1.jpg", "image2.jpg", "image3.jpg"]
 			},
 			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
+				"Website created for Spil Creative, the template has been created from scratch and then implemented in Wordpress."
 			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
+			"techniques": ["HTML5", "CSS3", "JavaScript", "Wordpress", "Photoshop"],
+			"year": "2015",
+			"disciplines": ["Front-end Development", "Designer"],
+			"finished": true,
+			"show": true
 		},
 		{
-			"name": "Project 6",
+			"name": "The Fashion Picture Dictionary",
+			"company": "Spil Creative",
+			"client": "The Fashion Professor",
+			"category": "Hybride Mobile App",
+			"links": ["https://goo.gl/2w25Av"],
+			"folder": "thefashionprofessor/app",
+			"images": {
+				"thumb": "thumb.png",
+				"showcase": ["image1.png", "image2.jpg", "image3.jpg"]
+			},
+			"description": [
+				"For The Fashion Professor I developed a mobile application for both Android and IOS. This app, called The Fashion Picture Dictionary, is an extensive visual collection of silhouettes and details for clothing."
+			],
+			"techniques": ["HTML5", "CSS3", "JavaScript", "Ionic", "Angular", "Google Sheets", "TypeScript", "Photoshop"],
+			"year": "2016",
+			"disciplines": ["Front-end Development", "App Development"],
+			"finished": true,
+			"show": true
+		},
+		{
+			"name": "The Fashion Professor",
+			"company": "Spil Creative",
+			"client": "The Fashion Professor",
 			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
+			"links": ["https://goo.gl/rF4Mfg"],
+			"folder": "thefashionprofessor/website",
 			"images": {
 				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
+				"showcase": ["image1.jpg", "image2.jpg", "image3.jpg"]
 			},
 			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
+				"Website redesigned for The Fashion Professor, the template has been created from scratch and then implemented in Wordpress"
 			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
+			"techniques": ["HTML5", "CSS3", "JavaScript", "Ionic", "Angular", "Google Sheets", "TypeScript", "Photoshop"],
+			"year": "2016",
+			"disciplines": ["Front-end Development", "Back-end Development"],
+			"finished": true,
+			"show": true
 		},
 		{
-			"name": "Project 7",
+			"name": "Fapadab",
+			"company": "Mach3builders",
+			"client": "Fapadag",
 			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
+			"links": ["https://goo.gl/wepga1"],
+			"folder": "fapadag",
 			"images": {
 				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
+				"showcase": ["image1.jpg", "image2.jpg", "image3.jpg"]
 			},
 			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
+				"Website created for Fapadab, its a non-responsive website developed from scratch and then implemented in Wordpress."
 			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 8",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 9",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 10",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 11",
-			"category": "App",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 12",
-			"category": "Web App",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 13",
-			"category": "Software",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 14",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 15",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 16",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 17",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
-		},
-		{
-			"name": "Project 18",
-			"category": "Website",
-			"link": "www.google.com",
-			"folder": "project1",
-			"images": {
-				"thumb": "thumb.jpg",
-				"showcase": ["project_1.jpg", "project_2.jpg", "project_3.jpg"] 
-			},
-			"description": [
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus.",
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. nascetur ridiculus mus."
-			],
-			"techniques": ["HTML5", "CSS3", "JavaScript", "jQuery", "Wordpress"],
-			"year": "2017",
-			"disciplines": ["Front-end Development", "Maintanance"]
+			"techniques": ["HTML5", "CSS3", "JavaScript", "Photoshop"],
+			"year": "2013",
+			"disciplines": ["Front-end Development"],
+			"finished": true,
+			"show": true
 		}
 	]
 }

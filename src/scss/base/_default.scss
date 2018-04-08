@@ -60,10 +60,9 @@ strong {
 @include breakpoint-between( 'sm-', 'sm+') {
 
 	body {
-		font-size: 4vw;
-		line-height: 6.5vw;
+		font-size: 3vw;
+		line-height: 5.5vw;
 		overflow: auto;
-		// touch-action: none;
 	}
 
 	h1 {

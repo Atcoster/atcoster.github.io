@@ -10,10 +10,25 @@ class Projects extends Component {
 
 		this.state = {
 			pageName     : 'PROJECTS',
-			projects     : Data.projects,
+			projects     : [],
 			activeID     : 1,
 			detailActive : false
 		}
+	}
+
+	componentWillMount() {
+		let projects       = Data.projects,
+		    activeProjects = [];
+
+		for ( let project of projects ) {
+			if ( project.show ) {
+				activeProjects.push( project );
+			}
+		}
+
+		this.setState( {
+			projects : activeProjects
+		} )
 	}
 
 	handleActiveProject( active, event ) {
@@ -46,7 +61,7 @@ class Projects extends Component {
 			activeID = this.state.activeID
 
 		return (
-			<section className='projects'>
+			<section className={`projects ${ this.state.detailActive ? ' projects--overflow' : ''}`}>
 				<div className='projects__content'>
 					<h2 className='projects__title'>
 						{ this.state.pageName }

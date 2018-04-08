@@ -26,7 +26,7 @@ class Social extends Component {
 				this.state.links.map(( link, index ) => {
 
 					const NAME = link.name.toLocaleLowerCase(),
-						URL  = link.url.toLocaleLowerCase();
+					      URL  = link.url.toLocaleLowerCase();
 
 					return (
 						<li key= { index } className='social__item'>

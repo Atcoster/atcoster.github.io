@@ -1,19 +1,21 @@
 .button {
-	$root : button;
+	$active : project--active;
 
 	@include z-pos-front();
 	@include skewed(-21.5deg);
 
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
 	position: absolute;
 	right: -1.7vw;
 	top: 1.7vw;
-	border: none;
 	background-color: $white;
 	color: $blue;
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
-	width: 9.8vw;
-	height: 2.6vw;
+	padding: 0.7vw 1.1vw;
+	border: 1px dotted $blue;
 
 	&__text {
 		text-transform: uppercase;
@@ -21,12 +23,28 @@
 	}
 
 	&__arrow {
-		display: inline-block;
-		width: 0.7vw;
-		height: 0.7vw;
+		width: 1.2vw;
+		height: 1.2vw;
 		background-image: svg-url-with-replaced-fill($svg-icon-right-arrow, $blue, $blue);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+
+	@include breakpoint-between( 'sm-', 'sm+') {
+		width: 30vw;
+		height: 7vw;
+		top: 3.7vw;
+		justify-content: center;
+
+		&__text {
+			font-size: 3vw;
+			margin-right: 1.8vw;
+		}
+
+		&__arrow {
+			width: 3.2vw;
+			height: 3.2vw;
+		}
 	}
 }

@@ -50,5 +50,13 @@
 	@include breakpoint-between( 'sm-', 'sm+') {
 		padding: 0;
 		overflow: unset;
+
+		&__list {
+			margin-bottom: 10vw;
+		}
+
+		&__control {
+			display: none;
+		}
 	}
 }

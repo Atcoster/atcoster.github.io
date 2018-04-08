@@ -36,21 +36,26 @@
 
 	&__list {
 		display: grid;
-		grid-gap: 5vw;
+		display: -ms-grid;
 		grid-template-columns: repeat(3, 1fr);
+		-ms-grid-columns: 1fr 1fr 1fr;
+		grid-gap: 5vw;
 
 		@include breakpoint('md') {
 			grid-template-columns: repeat(4, 1fr);
+			-ms-grid-columns: 1fr 1fr 1fr 1fr;
 			grid-gap: 4vw;
 		}
 
 		@include breakpoint('md+') {
 			grid-template-columns: repeat(5, 1fr);
+			-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
 			grid-gap: 3vw;
 		}
 
 		@include breakpoint('lg') {
 			grid-template-columns: repeat(6, 1fr);
+			-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 			grid-gap: 2vw;
 		}
 	}

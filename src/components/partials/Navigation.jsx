@@ -9,22 +9,12 @@ class Navigation extends Component {
 		super( props );
 
 		this.state = {
-			links : []
+			links : DetectMobile.os() ? [ 'home', 'story', 'skills', 'projects' ] : [ 'home', 'about', 'projects' ]
 		}
 	}
 
 	componentDidMount() {
-		let pages;
-
-		if ( DetectMobile.os()) {
-			pages = [ 'home', 'story', 'skills', 'projects' ];
-		} else {
-			pages = [ 'home', 'about', 'projects' ];
-		}
-
-		this.setState( {
-			links : pages
-		} )
+		Nav.activeHandler();
 	}
 
 	handleClick( event ) {
@@ -42,9 +32,9 @@ class Navigation extends Component {
 
 						return (
 							<li key= { index } className='nav__item'>
-								<a href={`#${LINK}`} onClick={ this.handleClick.bind( this )} className='nav__link'>
-									<i className={`nav__icon nav__icon--${LINK}`}></i>
-									<span className='nav__text'>{NAME}</span>
+								<a href={`#${ LINK }`} onClick={ this.handleClick.bind( this )} className='nav__link'>
+									<i className={`nav__icon nav__icon--${ LINK }`}></i>
+									<span className='nav__text'>{ NAME }</span>
 								</a>
 							</li>
 						)
