@@ -34,8 +34,17 @@
 		}
 	}
 
-	&__text:last-child {
+	&__text {
 		margin-top: 1.2vw;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@include breakpoint( 'md+') {
+			font-size: 0.9vw;
+			line-height: 1.3vw;
+		}
 	}
 
 	@include breakpoint-between( 'sm-', 'sm+') {
@@ -60,7 +69,7 @@
 			}
 		}
 
-		&__text:last-child {
+		&__text {
 			margin-top: 5.2vw;
 		}
 	}
