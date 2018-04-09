@@ -31,7 +31,8 @@ class Project extends Component {
 			name     = project.name,
 			company  = project.company.replace( /\s+/g, '' ).toLowerCase(),
 			folder   = project.folder.toLowerCase(),
-			thumb    = project.images.thumb.toLowerCase();
+			thumb    = project.images.thumb.toLowerCase(),
+			image    = require( `../../assets/images/projects/${ company }/${ folder }/${ thumb }` );
 
 		return (
 			<li className={`project${ isActive ? ' project--active' : ''}`} onClick={ this.handleOnclick.bind( this ) }>
@@ -39,7 +40,7 @@ class Project extends Component {
 				<h4 className='project__name'>
 					<span className="project__name__text">{ project.name }</span>
 				</h4>
-				<img className='project__image' src={`./src/assets/images/projects/${ company }/${ folder }/${ thumb }`} alt={ name }/>
+				<img className='project__image' src={ image } alt={ name }/>
 			</li>
 		)
 	}

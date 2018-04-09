@@ -29,11 +29,12 @@ class Skills extends Component {
 					<ul className='skills__list'>
 						{
 							this.state.skills.map(( skill, index ) => {
-								const SKILL   = skill.toLowerCase();
+								const SKILL = skill.toLowerCase();
+								let image   = require( `../../../assets/icons/skills/${ SKILL }.svg` );
 
 								return (
 									<li key= { index } className='skills__item' >
-										<img src= {`./src/assets/icons/skills/${ SKILL }.svg`} alt= { SKILL }/>
+										<img src= { image } alt= { SKILL }/>
 									</li>
 								)
 							} )

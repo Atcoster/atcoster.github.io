@@ -94,9 +94,10 @@ class ProjectDetails extends Component {
 		} );
 
 		[].forEach.call( project.images.showcase, ( img, index ) => {
+			let image = require( `../../assets/images/projects/${ company }/${ folder }/${ img }` );
 			images.push(
 				<img key={ index }
-					src={`./src/assets/images/projects/${ company }/${ folder }/${ img }`}
+					src={ image }
 					alt={ project.name }
 				/>
 			);
