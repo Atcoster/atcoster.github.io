@@ -12,15 +12,13 @@ const NAV = {
 		    skillsRect    = document.querySelector( '.skills' ).getBoundingClientRect(),
 		    projectsRect  = document.querySelector( '.projects' ).getBoundingClientRect(),
 		    items         = document.querySelectorAll( `.${originalClass}` ),
-			activeSection = '';
+		    activeSection = '';
 
 		for ( let item of items ) {
 			if ( 0 < item.className.indexOf( 'active' )) {
 				item.className = originalClass;
 			}
 		}
-
-		// console.log( isMobile, offset );
 
 		if ( event ) {
 			event.currentTarget.className = originalClass + activeClass;
@@ -60,9 +58,6 @@ const NAV = {
 					activeSection = 'projects';
 			}
 		}
-
-		// console.log( 'offset', offset );
-		// console.log( 'activesection', activeSection );
 
 		for ( let item of items ) {
 			let itemHref = item.href.split( '#' )[ 1 ].toString();
