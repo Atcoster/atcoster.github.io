@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Project from '../partials/Project';
 import ProjectSlider from '../../utils/ProjectSlider';
-import Swipe from 'react-easy-swipe';
+import Swipeable from 'react-swipeable';
 
 class Slider extends Component {
 
@@ -41,13 +41,15 @@ class Slider extends Component {
 		this.props.handleActiveProject( value, 'onClick' );
 	}
 
-	onSwipeMove( position ) {
+	swiping( e, deltaX, deltaY, absX, absY, velocity ) {
+		console.log( 'Youre Swiping...', deltaX, absX, velocity )
+
 		let slider        = document.querySelector( '.slider' );
 		let sliderList    = document.querySelector( '.slider__list' );
 		let allItems      = document.querySelectorAll( '.project' );
 		let min           = slider.getBoundingClientRect().left;
 		let marginLeft    = parseInt( sliderList.style.marginLeft, 10 );
-		let posX          = position.x;
+		let posX          = deltaX;
 		let sliderWidth   = 0;
 		let swipe         = '';
 
@@ -56,27 +58,29 @@ class Slider extends Component {
 				sliderWidth += itemWith;
 		} );
 
-		if ( 0 > posX ) {
-			posX  = -50;
+		if ( posX < 0 ) {
+			posX  = -50 * velocity;
 			swipe = 'left';
 		} else {
-			posX  = 50;
+			posX  = 50 * velocity;
 			swipe = 'right';
 		}
 
 		if ( marginLeft + sliderWidth <= min + 50 ) {
-			if (  swipe === 'left' ) {
+			if (  swipe === 'right' ) {
 				return;
 			}
 		}
 
 		if ( marginLeft >= min ) {
-			if ( swipe === 'right' ) {
+			if ( swipe === 'left' ) {
 				return;
 			}
 		}
 
-		sliderList.style.marginLeft = `${ marginLeft + posX }px`;
+		console.log( marginLeft );
+
+		sliderList.style.marginLeft = `${ marginLeft - posX }px`;
 	}
 
 	render() {
@@ -88,7 +92,7 @@ class Slider extends Component {
 
 		return (
 			<div className='slider'>
-			<Swipe onSwipeMove={ this.onSwipeMove }>
+			<Swipeable onSwiping={ this.swiping }>
 				<ul className='slider__list' style={ sliderStyle }>
 					{
 						this.state.projects.map(( project, index ) => {
@@ -104,7 +108,7 @@ class Slider extends Component {
 						} )
 					}
 				</ul>
-			</Swipe>
+			</Swipeable>
 				<div className='slider__control'>
 					<input
 						className='slider__input'
