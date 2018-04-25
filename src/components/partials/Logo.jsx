@@ -5,7 +5,7 @@ class Navigation extends Component {
 
 	render() {
 		return (
-			<a className='logo' href="http://atcoster.github.io" target="_blank" rel="noopener noreferrer">
+			<a className='logo' href="http://atcoster.github.io/portfolio" target="_blank" rel="noopener noreferrer">
 				<img src={ Logo } alt='logo'/>
 			</a>
 		);
