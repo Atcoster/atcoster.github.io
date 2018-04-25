@@ -9,7 +9,7 @@ class Navigation extends Component {
 		super( props );
 
 		this.state = {
-			links : [ 'home', 'story', 'skills', 'projects' ]
+			links : DetectMobile.os() ? [ 'home', 'story', 'skills', 'projects' ] : [ 'home', 'about', 'projects' ]
 		}
 	}
 

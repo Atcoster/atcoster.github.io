@@ -7,7 +7,6 @@ const NAV = {
 		    activeClass   = ` ${originalClass}--active`,
 		    offset        = isMobile ? window.pageYOffset : window.pageXOffset,
 		    homeRect      = document.querySelector( '.home' ).getBoundingClientRect(),
-		    aboutRect     = document.querySelector( '.about' ).getBoundingClientRect(),
 		    storyRect     = document.querySelector( '.story' ).getBoundingClientRect(),
 		    skillsRect    = document.querySelector( '.skills' ).getBoundingClientRect(),
 		    projectsRect  = document.querySelector( '.projects' ).getBoundingClientRect(),
@@ -26,16 +25,21 @@ const NAV = {
 			if ( !isMobile ) {
 				let	skewedWidth        = 250,
 				    homeFixedWidth     = homeRect.width - skewedWidth,
-				    aboutFixedWidth    = aboutRect.width - skewedWidth,
+					storyFixedWidth    = storyRect.width - skewedWidth,
+					skillsFixedWidth   = skillsRect.width - skewedWidth,
 				    projectsFixedWidth = projectsRect.width - skewedWidth;
 
 				if ( offset < homeFixedWidth )
 					activeSection = 'home';
 
-				if ( offset >= homeFixedWidth && offset <= homeFixedWidth + aboutFixedWidth )
-					activeSection = 'about';
+				if ( offset >= homeFixedWidth && offset <= homeFixedWidth + storyFixedWidth )
+					activeSection = 'story';
 
-				if ( offset > homeFixedWidth + aboutFixedWidth && offset <= homeFixedWidth + aboutFixedWidth + projectsFixedWidth )
+				if ( offset >= homeFixedWidth + storyFixedWidth && offset <= homeFixedWidth + storyFixedWidth + skillsFixedWidth )
+					activeSection = 'skills';
+
+				if ( offset > homeFixedWidth + storyFixedWidth + skillsFixedWidth &&
+					offset <= homeFixedWidth + storyFixedWidth + skillsFixedWidth + projectsFixedWidth )
 					activeSection = 'projects';
 			} else {
 				let header         = document.querySelector( '.header' ),
