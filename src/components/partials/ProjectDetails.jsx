@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Swipe from 'react-easy-swipe';
+import Swipeable from 'react-swipeable';
 
 class ProjectDetails extends Component {
 
@@ -16,7 +16,7 @@ class ProjectDetails extends Component {
 
 	componentDidMount() {
 		let count = Object.keys( this.state.projects ).length,
-			id    = 1 >= count ? 0 : 1;
+			id    = count <= 1 ? 0 : 1;
 
 		this.setState( {
 			id : id
@@ -42,20 +42,19 @@ class ProjectDetails extends Component {
 			acceptedElem = [ 'active', 'close' ];
 
 		for ( let elem of acceptedElem ) {
-			if ( 0 <= clickedElem.indexOf( elem )) {
+			if ( clickedElem.indexOf( elem ) >= 0 ) {
 				this.props.closeProductDetails();
 			}
 		}
 	}
 
-	onSwipeLeft( id ) {
-		let newID = id + 1;
+	swiped( e, deltaX, deltaY, isFlick, velocity ) {
+		const MIN = 60;
+		const id  = this.state.id;
 
-		this.props.handleActiveProject( newID, 'onClick' );
-	}
+		if ( deltaX <= MIN && deltaX >= -MIN ) return;
 
-	onSwipeRight( id ) {
-		let newID = id - 1;
+		let newID = deltaX > 0 ? id + 1 : id - 1;
 
 		this.props.handleActiveProject( newID, 'onClick' );
 	}
@@ -63,7 +62,7 @@ class ProjectDetails extends Component {
 	handleActiveProject( e ) {
 		let clickedElem = e.target.className,
 			currentID   = this.state.id,
-			newID       = 0 < clickedElem.indexOf( 'larrow' ) ? currentID - 1 : currentID + 1;
+			newID       = clickedElem.indexOf( 'larrow' ) > 0 ? currentID - 1 : currentID + 1;
 
 		this.props.handleActiveProject( newID, 'onClick' );
 	}
@@ -105,10 +104,10 @@ class ProjectDetails extends Component {
 
 		return (
 			<div className={`details ${ activeClass }`} onClick={ this.closeProductDetails.bind( this )}>
-				<Swipe onSwipeLeft={ this.onSwipeLeft.bind( this, this.state.id ) } onSwipeRight={ this.onSwipeRight.bind( this, this.state.id ) }>
+				<Swipeable onSwiped={ this.swiped.bind( this ) }>
 					<div className='details__wrapper'>
 						<div className='details__control'>
-							<span className={`details__icon details__icon--larrow${ 0 >= this.state.id ? ' details__icon--off' : '' }`}
+							<span className={`details__icon details__icon--larrow${ this.state.id <= 0 ? ' details__icon--off' : '' }`}
 								onClick={ this.handleActiveProject.bind( this ) }></span>
 							<span className={`details__icon details__icon--rarrow
 								${ this.state.id >= this.state.projects.length - 1 ? ' details__icon--off' : '' }`}
@@ -134,7 +133,7 @@ class ProjectDetails extends Component {
 							{ images }
 						</div>
 					</div>
-				</Swipe>
+				</Swipeable>
 			</div>
 		)
 	}

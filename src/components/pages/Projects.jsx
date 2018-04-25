@@ -33,7 +33,7 @@ class Projects extends Component {
 
 	handleActiveProject( active, event ) {
 		let activeID      = active,
-			displayDetail = 'onClick' === event;
+			displayDetail = event === 'onClick';
 
 		if ( 0 > activeID ) {
 			activeID = 0;

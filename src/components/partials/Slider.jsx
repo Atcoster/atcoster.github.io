@@ -65,13 +65,13 @@ class Slider extends Component {
 		}
 
 		if ( marginLeft + sliderWidth <= min + 50 ) {
-			if ( 'left' === swipe ) {
+			if (  swipe === 'left' ) {
 				return;
 			}
 		}
 
 		if ( marginLeft >= min ) {
-			if ( 'right' === swipe ) {
+			if ( swipe === 'right' ) {
 				return;
 			}
 		}

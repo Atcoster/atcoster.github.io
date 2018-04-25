@@ -102,9 +102,11 @@
 			"any"
 		],
 		"yoda": [
-			1,
-			"always",
-			{}
+			2,
+			"never",
+			{
+				"onlyEquality": true
+			}
 		],
 		"strict": [
 			1,
