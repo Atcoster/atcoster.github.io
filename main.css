@@ -396,8 +396,9 @@ strong {
   align-items: center;
   width: 100%;
   padding: 10vw 10vw 10vw 18vw;
-  background: url(fab5cc2d1c706822fe6944c584bcd944.jpg) no-repeat center;
-  background-size: cover; }
+  background: url(bf58b0e6939a25462ee4aac71f2bfb92.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed; }
   .home__content {
     position: relative;
     z-index: 99;
@@ -481,12 +482,13 @@ strong {
   z-index: 97;
   display: flex;
   flex: 0 0 auto;
-  background: url(b9da62e5008e25d977299999b25b2365.jpg) no-repeat center;
-  background-size: cover;
   width: 100%;
   padding: 5vw 0;
   overflow: hidden;
-  align-items: center; }
+  align-items: center;
+  background: url(0c5fa5decc9df97d07e4a17f2ec9b992.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed; }
   .projects:before {
     background: #1cb3ff;
     /* The Fallback */
@@ -1161,7 +1163,7 @@ strong {
   .details__images {
     display: grid;
     grid-gap: 0.6vw;
-    grid-template-columns: repeat(2, 0.4fr); }
+    grid-template-columns: repeat(2, 1fr); }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       .details__images {
         display: -ms-flexbox;
