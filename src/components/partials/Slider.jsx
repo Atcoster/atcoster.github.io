@@ -41,9 +41,7 @@ class Slider extends Component {
 		this.props.handleActiveProject( value, 'onClick' );
 	}
 
-	swiping( e, deltaX, deltaY, absX, absY, velocity ) {
-		console.log( 'Youre Swiping...', deltaX, absX, velocity )
-
+	swiping( e, deltaX ) {
 		let slider        = document.querySelector( '.slider' );
 		let sliderList    = document.querySelector( '.slider__list' );
 		let allItems      = document.querySelectorAll( '.project' );
@@ -59,10 +57,10 @@ class Slider extends Component {
 		} );
 
 		if ( posX < 0 ) {
-			posX  = -50 * velocity;
+			posX  = -50;
 			swipe = 'left';
 		} else {
-			posX  = 50 * velocity;
+			posX  = 50;
 			swipe = 'right';
 		}
 
@@ -77,8 +75,6 @@ class Slider extends Component {
 				return;
 			}
 		}
-
-		console.log( marginLeft );
 
 		sliderList.style.marginLeft = `${ marginLeft - posX }px`;
 	}
