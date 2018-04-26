@@ -5,8 +5,6 @@
 	flex: 0 0 auto;
 	align-items: center;
 	width: 100%;
-
-	// padding: 140px 140px 140px 240px;
 	padding: 10vw 10vw 10vw 18vw;
 	background: url('./../assets/images/home_bg.jpg') no-repeat center;
 	background-size: cover;
@@ -31,11 +29,13 @@
 	}
 
 	&__title {
+		position: relative;
 
 		input {
 			background: none;
 			border: none;
 			color: transparent;
+			width: 100%;
 
 			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 				color: $white;
