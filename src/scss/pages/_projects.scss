@@ -3,12 +3,13 @@
 
 	display: flex;
 	flex: 0 0 auto;
-	background: url('./../assets/images/projects_bg.jpg') no-repeat center;
-	background-size: cover;
 	width: 100%;
 	padding: 5vw 0;
 	overflow: hidden;
 	align-items: center;
+	background: url('./../assets/images/projects_bg.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
 
 	&:before {
 		@include background-opacity($blue);

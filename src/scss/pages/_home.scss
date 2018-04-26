@@ -10,6 +10,7 @@
 	padding: 10vw 10vw 10vw 18vw;
 	background: url('./../assets/images/home_bg.jpg') no-repeat center;
 	background-size: cover;
+	background-attachment: fixed;
 
 	&__content {
 		@include z-pos-front();
