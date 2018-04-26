@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DetectMobile from '../../utils/DetectMobile';
 import Particles from 'react-particles-js';
+import Typed from 'react-typed';
 
 class Home extends Component {
 
@@ -54,12 +55,27 @@ class Home extends Component {
 							width    : '100vw',
 							left     : 0,
 							top      : 0,
-							zIndex   : 999
+							zIndex   : 97
 						}
 					}
 				/>
 				<article className='home__content'>
-					<h1 className='home__title'>HOLA!</h1>
+					<h1 className='home__title'>
+						<Typed
+							strings= {
+								[
+									'Bienvenid@!',
+									'Welcome!',
+									'Welkom!'
+								]
+							}
+							typeSpeed = { 50 }
+							backSpeed = { 50 }
+							attr= 'placeholder'
+							loop >
+							<input type='text'/>
+						</Typed>
+					</h1>
 					<h3 className='home__subtitle'>I am Andji, a Front-end Developer.</h3>
 					<p className='home__text'>
 						From an early age I have been very passionate about programming and technology in general.
