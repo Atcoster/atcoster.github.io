@@ -416,6 +416,23 @@ strong {
     right: 0;
     bottom: 0;
     z-index: 2; }
+  .home__title input {
+    background: none;
+    border: none;
+    color: transparent; }
+    .home__title input::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #fff;
+      opacity: 1;
+      /* Firefox */ }
+    .home__title input::-ms-input-placeholder {
+      /* Edge */
+      color: #fff; }
+    .home__title input:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #fff; }
+    .home__title input:focus {
+      outline: none; }
   @media (min-width: 320px) and (max-width: 639px) {
     .home {
       min-height: 100vh;
