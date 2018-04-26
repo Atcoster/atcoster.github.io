@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DetectMobile from '../../utils/DetectMobile';
+import Particles from 'react-particles-js';
 
 class Home extends Component {
 
@@ -17,6 +18,46 @@ class Home extends Component {
 	render() {
 		return (
 			<section className='home'>
+			<Particles
+					params = {
+						{
+							'particles' : {
+								'line_linked' : {
+									'shadow' : {
+										'enable' : true,
+										'color'  : '#fff',
+										'blur'   : 3
+									},
+									'distance' : 150,
+									'shape'    : {
+										'type'    : 'circle',
+										'polygon' : {
+											'nb_sides' : 5
+										}
+									}
+								}
+							},
+							'interactivity' : {
+								'detect_on' : 'canvas',
+								'events'    : {
+									'onhover' : {
+										'enable' : true,
+										'mode'   : 'repulse'
+									}
+								}
+							}
+						}
+					}
+					style={
+						{
+							position : 'absolute',
+							width    : '100vw',
+							left     : 0,
+							top      : 0,
+							zIndex   : 999
+						}
+					}
+				/>
 				<article className='home__content'>
 					<h1 className='home__title'>HOLA!</h1>
 					<h3 className='home__subtitle'>I am Andji, a Front-end Developer.</h3>

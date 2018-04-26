@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Nav from '../../utils/Nav';
-import DetectMobile from '../../utils/DetectMobile.js';
 
 class Navigation extends Component {
 

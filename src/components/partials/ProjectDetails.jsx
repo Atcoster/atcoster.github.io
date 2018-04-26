@@ -48,7 +48,7 @@ class ProjectDetails extends Component {
 		}
 	}
 
-	swiped( e, deltaX, deltaY, isFlick, velocity ) {
+	swiped( e, deltaX ) {
 		const MIN = 60;
 		const id  = this.state.id;
 
